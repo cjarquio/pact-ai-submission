@@ -1,5 +1,50 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# 🔍 Resource Viewer Web App
+
+A modern, responsive web application built using **Next.js**, **React**, and **shadcn/ui**, with a powerful table implementation via **TanStack Table**. The app displays a list of resource entries stored in **Firestore**, allowing users to view key metadata at a glance and inspect detailed summaries on interaction.
+
+---
+
+## 📦 Tech Stack
+
+- [Next.js](https://nextjs.org/) – React framework for SSR & API routing
+- [React](https://react.dev/) – Component-based UI development
+- [shadcn/ui](https://ui.shadcn.com/) – Modern and accessible UI components
+- [TanStack Table](https://tanstack.com/table/v8) – Headless and highly customizable table logic
+- [Firebase (Firestore)](https://firebase.google.com/docs/firestore) – Cloud-hosted NoSQL database for resource storage
+
+---
+
+## 📄 Description
+
+This project renders a table UI displaying **ResourceWrapper** data. Each row presents key fields and supports expanding to show more detailed information.
+
+Data is fetched directly from **Firestore**, and the table displays:
+
+### 🧾 Table Fields (Collapsed View)
+- `resourceType`
+- `createdTime` (as a human-readable timestamp)
+- `fetchTime` (relative to "now", e.g., "5 minutes ago")
+
+### 🔍 Expanded Row Details
+- `humanReadableStr`
+- `aiSummary`
+- Any other nested fields from the `ResourceWrapper`
+
+> 📄 **Reference Schema:**  
+> `ResourceWrapper` definition: [Pastebin Link](https://pastebin.com/vGpQz1va)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/resource-viewer.git
+cd resource-viewer
+
 ## Getting Started
 
 First, run the development server:
